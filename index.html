@@ -49,8 +49,7 @@
             <div>
                 <ul v-if="todos.length != 0">
                     <li v-for="(todo, index) in todos">
-                        {{ todo.text }}
-                        
+                        <span :class="{'completed': todo.done}" @click="toggleDone(index)">{{ todo.text }}</span>
                         <i class="fas fa-times" @click="deleteItem(index)"></i>
                     </li>
                 </ul>

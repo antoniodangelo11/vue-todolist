@@ -46,6 +46,10 @@ const app = Vue.createApp({
         deleteItem(index) {
             this.todos.splice(index, 1);
         },
+
+        toggleDone(index) {
+            this.todos[index].done = !this.todos[index].done
+        },
     },
 });
   

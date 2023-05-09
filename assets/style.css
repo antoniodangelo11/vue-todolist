@@ -1,3 +1,7 @@
 body {
     background-color: cadetblue;
 }
+
+.completed {
+    text-decoration: line-through;
+}
