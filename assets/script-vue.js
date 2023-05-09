@@ -2,12 +2,7 @@ const app = Vue.createApp({
     data() {
       return {
         inputError: false,
-
-        newTodo: {
-            text: '',
-            done: false,
-        },
-        
+        newTodo: '',
         todos: [
             {
                 text: "Fare la spesa",
