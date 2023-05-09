@@ -30,7 +30,7 @@ const app = Vue.createApp({
     methods: {
         addTodo() {
             let cleanedTodo = this.newTodo.trim();
-            if (cleanedTodo.length > 5 != '') {
+            if (cleanedTodo.length > 4 != '') {
                 this.todos.unshift(cleanedTodo);
                 this.newTodo = '';
                 this.inputError = false;

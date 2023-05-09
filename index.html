@@ -27,23 +27,32 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="" alt="Logo Boolean">
+            <img src="img/logo.png" alt="Logo Boolean">
         </div>
         
         <div id="app">
-            <div class="new_tasks">
+            <div>
                 <div action="">
-                    <input @keyup.enter="addTodo" type="text" placeholder="Nuova Tasks" v-model="newTodo">
+                    <input 
+                        @keyup.enter="addTodo" type="text" 
+                        placeholder="Nuova Tasks" 
+                        v-model="newTodo"
+                    >
                     <button @click="addTodo">Aggiungi</button>
-                    <div v-show="inputError" class="error">
-                        <small class="text-danger">Devi inserire un testo di almeno 5 caratteri</small>
+                    
+                    <div v-show="inputError">
+                        <small class="text-danger">
+                            Devi inserire un testo di almeno 5 caratteri
+                        </small>
                     </div>
                 </div>
             </div>
 
-            <div class="tasks_container">
+            <div>
                 <ul v-if="todos.length != 0">
-                    <li v-for="(todo, index) in todos" class="tasks">
+                    <li 
+                        v-for="(todo, index) in todos"
+                    >
                         {{ todo.text }}
                         <i class="fas fa-times" @click="deleteItem(index)"></i>
                     </li>
