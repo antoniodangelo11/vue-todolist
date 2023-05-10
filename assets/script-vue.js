@@ -31,7 +31,7 @@ const app = Vue.createApp({
     methods: {
         addTodo() {
             let cleanedTodo = this.newTodo.trim();
-            if (cleanedTodo.length > 4 != '') {
+            if (cleanedTodo.length >= 5) {
                 this.todos.unshift({
                     text: this.newTodo,
                     done: false,
@@ -47,8 +47,8 @@ const app = Vue.createApp({
             this.todos.splice(index, 1);
         },
 
-        toggleDone(index) {
-            this.todos[index].done = !this.todos[index].done
+        toggleDone(todo) {
+            todo.done = !todo.done
         },
     },
 });
